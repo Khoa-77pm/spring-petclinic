@@ -12,6 +12,7 @@ services:
       - MYSQL_URL=jdbc:mysql://mysqlserver/petclinic
     volumes:
       - ./:/app
+      - maven-repo:/root/.m2
     depends_on:
       - mysqlserver
 
@@ -31,3 +32,4 @@ services:
 volumes:
   mysql_data:
   mysql_config:
+  maven-repo:
